@@ -1,5 +1,6 @@
 import { Group, Text, Title } from "@mantine/core";
-import Image from "next/image";
+import NextImage from "next/image";
+import { Image } from "@mantine/core";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       <section>
         <Title order={2}>Explore</Title>
         <Group>
-          <Image src="image1.jpg" alt="Hall of a big library" />
+          <Image component={NextImage} src="/image1.jpg" alt="Hello" width={500} height={0} />
           <Text></Text>
         </Group>
       </section>
