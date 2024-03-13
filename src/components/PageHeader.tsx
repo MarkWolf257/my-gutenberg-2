@@ -11,7 +11,7 @@ const links = [
 export default function PageHeader() {
   const items = links.map((link) => {
     return (
-      <Button component={Link} href={link.link} variant='subtle'>{link.label}</Button>
+      <Button key={link.label} component={Link} href={link.link} variant='subtle'>{link.label}</Button>
     )
   })
 
