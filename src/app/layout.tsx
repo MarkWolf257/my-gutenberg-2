@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "@mantine/core/styles.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import PageHeader from "../components/PageHeader.tsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapi.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.google.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
         <ColorSchemeScript />
       </head>
       <body className={inter.className}>
-      <MantineProvider>{children}</MantineProvider>
+        <MantineProvider>
+          <PageHeader />
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );
