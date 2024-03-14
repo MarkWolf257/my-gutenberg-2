@@ -6,7 +6,7 @@ import classes from './css/PageHeader.module.css';
 const links = [
   { link: '/', label: 'Home' },
   { link: '/books', label: 'Books' },
-  { link: '/about', label: 'AboutUs' },
+  { link: '/about', label: 'About Us' },
 ]
 
 export default function PageHeader() {

@@ -1,0 +1,10 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(1.2rem);
+
+  border-top: rem(1px) solid var(--mantine-color-gray-3);
+  box-shadow: inset 0 rem(1rem) rem(1rem) rem(-1rem) var(--mantine-color-gray-3);
+  padding-top: rem(1.5rem);
+}
