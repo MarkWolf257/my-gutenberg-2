@@ -8,8 +8,8 @@ export default function PageFooter() {
   const socialMediaLinks = ['', '', ''];
   const socialMediaIcons = [FaFacebook, FaInstagram, FaTwitter].map((Component, index) => {
     return (
-      <Link href={socialMediaLinks[index]}>
-        <Component key={index} size={40} />
+      <Link key={index} href={socialMediaLinks[index]}>
+        <Component size={40} />
       </Link>
     )
   })
