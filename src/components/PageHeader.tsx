@@ -1,6 +1,7 @@
 import { Button, Container, Group } from '@mantine/core';
 import Link from 'next/link';
 import Logo from './Logo.tsx';
+import classes from './css/PageHeader.module.css';
 
 const links = [
   { link: '/', label: 'Home' },
@@ -16,7 +17,7 @@ export default function PageHeader() {
   })
 
   return (
-    <header>
+    <header className={classes.header}>
       <Container>
         <Logo />
         <Group>
