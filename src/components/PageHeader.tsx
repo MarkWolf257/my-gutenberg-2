@@ -1,18 +1,18 @@
 import { Button, Container, Group } from '@mantine/core';
 import Link from 'next/link';
-import Logo from './Logo.tsx';
+import Logo from './Logo';
 import classes from './css/PageHeader.module.css';
 
 const links = [
   { link: '/', label: 'Home' },
-  { link: '/about', label: 'About Us' },
   { link: '/books', label: 'Books' },
+  { link: '/about', label: 'AboutUs' },
 ]
 
 export default function PageHeader() {
   const items = links.map((link) => {
     return (
-      <Button className={classes.link} key={link.label} component={Link} href={link.link} variant='transparent'>{link.label}</Button>
+      <Link className={classes.link} key={link.label} href={link.link}>{link.label}</Link>
     )
   })
 
@@ -20,7 +20,7 @@ export default function PageHeader() {
     <header className={classes.header}>
       <Container className={classes.inner} size="lg">
         <Logo />
-        <Group>
+        <Group gap={25}>
           {items}
         </Group>
       </Container>
