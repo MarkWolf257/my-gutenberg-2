@@ -12,13 +12,13 @@ const links = [
 export default function PageHeader() {
   const items = links.map((link) => {
     return (
-      <Button key={link.label} component={Link} href={link.link} variant='subtle'>{link.label}</Button>
+      <Button className={classes.link} key={link.label} component={Link} href={link.link} variant='transparent'>{link.label}</Button>
     )
   })
 
   return (
     <header className={classes.header}>
-      <Container>
+      <Container className={classes.inner} size="lg">
         <Logo />
         <Group>
           {items}
