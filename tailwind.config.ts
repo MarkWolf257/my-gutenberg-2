@@ -15,7 +15,8 @@ const config: Config = {
       },
       fontFamily: {
         "abril": ["Abril Fatface", "serif"],
-        "poppins": ["Poppins", "sans-serif"]
+        "poppins": ["Poppins", "sans-serif"],
+        "lato": ["Lato", "sans-serif"],
       }
     },
   },

@@ -20,11 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: rem(2rem);
 
   padding: rem(2rem) 0;
-}
-
-.title2 {
-  font-family: "Poppins", sans-serif;
-  font-size: rem(2rem);
 }

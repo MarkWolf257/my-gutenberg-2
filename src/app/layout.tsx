@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "@mantine/core/styles.css";
-import {ColorSchemeScript, createTheme, MantineColorsTuple, MantineProvider} from "@mantine/core";
+import { ColorSchemeScript, createTheme, MantineColorsTuple, MantineProvider, rem } from "@mantine/core";
 import PageHeader from "../components/PageHeader";
 import PageFooter from "../components/PageFooter";
 
@@ -30,7 +30,14 @@ const theme = createTheme({
   primaryColor: "oldRose",
   colors: {
     oldRose,
-  }
+  },
+
+  headings: {
+    fontFamily: "Poppins, sans-serif",
+    sizes: {
+      h2: { fontSize: rem(32) },
+    },
+  },
 })
 
 export default function RootLayout({
@@ -43,7 +50,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link crossOrigin="" rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;700&family=Lato&display=swap" rel="stylesheet" />
         <ColorSchemeScript />
       </head>
       <body className={inter.className}>
